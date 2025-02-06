@@ -15,6 +15,12 @@ app.get('/', (req, res) => {
     res.send('Hello blog!')
   })
 
+
+  app.get(`/blog/:slug`, (req, res) => {
+    res.send(`Hello ${req.params.slug}`)
+  })
+
+
 app.listen(port, () =>{
     console.log(`Server running on port ${port}.`);
 })
